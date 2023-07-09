@@ -22,9 +22,9 @@ define("irePropertyViews1Page", [], function() {
 				"name": "LOOKUPafb9a172-c4a1-4e36-aba5-431255a7a74b",
 				"values": {
 					"layout": {
-						"colSpan": 6,
+						"colSpan": 12,
 						"rowSpan": 1,
-						"column": 0,
+						"column": 12,
 						"row": 0,
 						"layoutName": "Header"
 					},
@@ -41,10 +41,10 @@ define("irePropertyViews1Page", [], function() {
 				"name": "LOOKUPb2614aac-81ea-4c0a-8716-2544c1460a3c",
 				"values": {
 					"layout": {
-						"colSpan": 6,
+						"colSpan": 12,
 						"rowSpan": 1,
-						"column": 6,
-						"row": 0,
+						"column": 12,
+						"row": 1,
 						"layoutName": "Header"
 					},
 					"bindTo": "irePotentialClient",
@@ -62,8 +62,8 @@ define("irePropertyViews1Page", [], function() {
 					"layout": {
 						"colSpan": 12,
 						"rowSpan": 1,
-						"column": 12,
-						"row": 0,
+						"column": 0,
+						"row": 1,
 						"layoutName": "Header"
 					},
 					"bindTo": "ireDatetime1",
@@ -81,7 +81,7 @@ define("irePropertyViews1Page", [], function() {
 						"colSpan": 24,
 						"rowSpan": 1,
 						"column": 0,
-						"row": 1,
+						"row": 2,
 						"layoutName": "Header"
 					},
 					"bindTo": "irePropertyViewNotes",
@@ -90,6 +90,25 @@ define("irePropertyViews1Page", [], function() {
 				"parentName": "Header",
 				"propertyName": "items",
 				"index": 3
+			},
+			{
+				"operation": "insert",
+				"name": "LOOKUPfe852362-d645-4fda-abd4-2fac6014f7f6",
+				"values": {
+					"layout": {
+						"colSpan": 12,
+						"rowSpan": 1,
+						"column": 0,
+						"row": 0,
+						"layoutName": "Header"
+					},
+					"bindTo": "irePropertyLookup",
+					"enabled": true,
+					"contentType": 5
+				},
+				"parentName": "Header",
+				"propertyName": "items",
+				"index": 4
 			},
 			{
 				"operation": "insert",

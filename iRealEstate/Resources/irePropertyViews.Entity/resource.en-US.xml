@@ -5,6 +5,7 @@
 			<Item Name="Caption" Value="Просмотры" />
 			<Item Name="Columns.ireDatetime1.Caption" Value="Дата-время просмотра" />
 			<Item Name="Columns.irePotentialClient.Caption" Value="Потенциальный клиент" />
+			<Item Name="Columns.irePropertyLookup.Caption" Value="Недвижимость" />
 			<Item Name="Columns.irePropertyView.Caption" Value="Name" />
 			<Item Name="Columns.irePropertyViewNotes.Caption" Value="Комментарий" />
 			<Item Name="Columns.ireResponsible.Caption" Value="Ответственный" />
