@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Просмотры in Folder" />
+			<Item Name="Columns.Folder.Caption" Value="Просмотры folder" />
+			<Item Name="Columns.irePropertyViews.Caption" Value="Просмотры" />
+		</Items>
+	</Group>
+</Resources>

@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "879ee2ec-5b15-48a3-b14a-a499554e584a",
+    "Name": "irePropertyInTag",
+    "ModifiedOnUtc": "\/Date(1688901141000)\/",
+    "Parent": {
+      "UId": "5894a2b0-51d5-419a-82bb-238674634270",
+      "Name": "BaseEntityInTag"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Недвижимость section record tag",
+    "DependsOn": []
+  }
+}

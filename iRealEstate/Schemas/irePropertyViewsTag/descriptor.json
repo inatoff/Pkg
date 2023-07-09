@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "e4292f63-1ce6-4dd8-a1e9-0b785ea5f5fc",
+    "Name": "irePropertyViewsTag",
+    "ModifiedOnUtc": "\/Date(1688921512000)\/",
+    "Parent": {
+      "UId": "9e3f203c-e905-4de5-9468-335b193f2439",
+      "Name": "BaseTag"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Просмотры section tag"
+  }
+}

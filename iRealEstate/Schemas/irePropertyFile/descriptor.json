@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "282f0686-bb07-4432-813a-51083a0295e9",
+    "Name": "irePropertyFile",
+    "ModifiedOnUtc": "\/Date(1688901128000)\/",
+    "Parent": {
+      "UId": "556c5867-60a7-4456-aae1-a57a122bef70",
+      "Name": "File"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Недвижимость attachment",
+    "DependsOn": []
+  }
+}

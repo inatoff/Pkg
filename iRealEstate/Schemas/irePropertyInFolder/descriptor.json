@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "07f17e51-cdc8-4d08-9f02-9794b8c1d6ae",
+    "Name": "irePropertyInFolder",
+    "ModifiedOnUtc": "\/Date(1688901135000)\/",
+    "Parent": {
+      "UId": "4f63bafb-e9e7-4082-b92e-66b97c14017c",
+      "Name": "BaseItemInFolder"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Недвижимость in Folder",
+    "DependsOn": []
+  }
+}

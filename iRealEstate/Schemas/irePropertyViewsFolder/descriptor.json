@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "9d3954ec-5f20-4273-89d4-ba2a5147bb3b",
+    "Name": "irePropertyViewsFolder",
+    "ModifiedOnUtc": "\/Date(1688921506000)\/",
+    "Parent": {
+      "UId": "d602bf96-d029-4b07-9755-63c8f5cb5ed5",
+      "Name": "BaseFolder"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Просмотры folder"
+  }
+}

@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "af18ff32-633b-4f54-98eb-8747b1166a1d",
+    "Name": "irePropertyViewsFile",
+    "ModifiedOnUtc": "\/Date(1688921502000)\/",
+    "Parent": {
+      "UId": "556c5867-60a7-4456-aae1-a57a122bef70",
+      "Name": "File"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Просмотры attachment"
+  }
+}

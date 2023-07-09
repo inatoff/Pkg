@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Недвижимость" />
+			<Item Name="Columns.CreatedBy.Caption" Value="Зарегистрировал" />
+			<Item Name="Columns.CreatedOn.Caption" Value="Дата регистрации" />
+			<Item Name="Columns.ireName.Caption" Value="Название" />
+			<Item Name="Columns.ireNotes.Caption" Value="Комментарий" />
+			<Item Name="Columns.irePropertyArea.Caption" Value="Площадь" />
+			<Item Name="Columns.irePropertyOfferType.Caption" Value="Тип предложения недвижимости" />
+			<Item Name="Columns.irePropertyPrice.Caption" Value="Цена, USD" />
+			<Item Name="Columns.irePropertyType.Caption" Value="Тип недвижимости" />
+			<Item Name="Columns.ModifiedBy.Caption" Value="Редактировал" />
+			<Item Name="Columns.ModifiedOn.Caption" Value="Дата редакции" />
+		</Items>
+	</Group>
+</Resources>
