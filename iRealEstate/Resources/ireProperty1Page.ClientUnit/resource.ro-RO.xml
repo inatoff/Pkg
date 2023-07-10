@@ -3,6 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Edit page: &quot;Недвижимость&quot;" />
+			<Item Name="LocalizableStrings.ireSchema9039d743Detail6e11f969DetailCaptionOnPage.Value" Value="Obiect de baza" />
 		</Items>
 	</Group>
 </Resources>

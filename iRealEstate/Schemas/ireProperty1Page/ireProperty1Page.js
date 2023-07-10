@@ -1,7 +1,23 @@
 define("ireProperty1Page", [], function() {
 	return {
 		entitySchemaName: "ireProperty",
-		attributes: {},
+		attributes: {
+			/**
+				* Service Fee.
+				*/
+				"irePropertyServiceFee": {
+					dependencies: [
+						{
+							columns: ["irePropertyOfferType"],
+							methodName: "calculateServiceFee"
+						},
+						{
+							columns: ["irePropertyPrice"],
+							methodName: "calculateServiceFee"
+						}
+					]
+				},
+		},
 		modules: /**SCHEMA_MODULES*/{}/**SCHEMA_MODULES*/,
 		details: /**SCHEMA_DETAILS*/{
 			"Files": {
@@ -11,35 +27,48 @@ define("ireProperty1Page", [], function() {
 					"masterColumn": "Id",
 					"detailColumn": "ireProperty"
 				}
-			}
-		}/**SCHEMA_DETAILS*/,
-		businessRules: /**SCHEMA_BUSINESS_RULES*/{
-			"ireNotes": {
-				"2ed4f988-ff82-43ad-ac4a-07abed12228a": {
-					"uId": "2ed4f988-ff82-43ad-ac4a-07abed12228a",
-					"enabled": true,
-					"removed": false,
-					"ruleType": 0,
-					"property": 2,
-					"logical": 0,
-					"conditions": [
-						{
-							"comparisonType": 7,
-							"leftExpression": {
-								"type": 1,
-								"attribute": "irePropertyPrice"
-							},
-							"rightExpression": {
-								"type": 0,
-								"value": 100000,
-								"dataValueType": 5
-							}
-						}
-					]
+			},
+			"ireSchema9039d743Detail6e11f969": {
+				"schemaName": "ireSchema9039d743Detail",
+				"entitySchemaName": "irePropertyViews",
+				"filter": {
+					"detailColumn": "irePropertyLookup",
+					"masterColumn": "Id"
 				}
 			}
-		}/**SCHEMA_BUSINESS_RULES*/,
-		methods: {},
+		}/**SCHEMA_DETAILS*/,
+		businessRules: /**SCHEMA_BUSINESS_RULES*/{}/**SCHEMA_BUSINESS_RULES*/,
+		methods: {
+           calculateServiceFee: function() {
+                var price = this.get("irePropertyPrice");
+                var offerType = this.get("irePropertyOfferType");
+                var calculatedValue;
+
+                if (offerType.displayValue === "Аренда") {
+                    calculatedValue = price * 0.5;
+                } else if (offerType.displayValue === "Продажа") {
+                    calculatedValue = price * 0.02;
+                } else {
+                    calculatedValue = null; // Set default value or handle other offer types
+                }
+
+                this.set("irePropertyServiceFee", calculatedValue);
+            },
+            onEntityInitialized: function() {
+				this.callParent(arguments);
+                this.calculateServiceFee();
+            },
+			onlyPositiveValues: function(value) {
+				return {
+					invalidMessage: (value && value < 0) ? 'Отрицательное значение недопустимо' : ''
+				};
+			},
+			setValidationConfig: function() {
+				this.callParent(arguments);
+				this.addColumnValidator("irePropertyPrice", this.onlyPositiveValues);
+				this.addColumnValidator("irePropertyArea", this.onlyPositiveValues);
+			}
+        },
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
 		diff: /**SCHEMA_DIFF*/[
 			{
@@ -136,6 +165,29 @@ define("ireProperty1Page", [], function() {
 			},
 			{
 				"operation": "insert",
+				"name": "ServiceFeef3baaab6-6e19-4fdf-a6d3-c3896b6bb9b9",
+				"values": {
+					"layout": {
+						"colSpan": 24,
+						"rowSpan": 1,
+						"column": 0,
+						"row": 5,
+						"layoutName": "ProfileContainer"
+					},
+					"bindTo": "irePropertyServiceFee",
+					"tip": {
+						"content": {
+							"bindTo": "Resources.Strings.FLOATf3baaab66e194fdfa6d3c3896b6bb9b9Tip"
+						}
+					},
+					"enabled": false,
+				},
+				"parentName": "ProfileContainer",
+				"propertyName": "items",
+				"index": 5
+			},
+			{
+				"operation": "insert",
 				"name": "FLOAT46ec88a1-28ca-4c6a-9510-d345c56a8252",
 				"values": {
 					"layout": {
@@ -183,7 +235,7 @@ define("ireProperty1Page", [], function() {
 						"layoutName": "Header"
 					},
 					"bindTo": "irePropertyPrice",
-					"enabled": true
+					"enabled": true,
 				},
 				"parentName": "Header",
 				"propertyName": "items",
@@ -291,6 +343,17 @@ define("ireProperty1Page", [], function() {
 				"parentName": "NotesControlGroup",
 				"propertyName": "items",
 				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "ireSchema9039d743Detail6e11f969",
+				"values": {
+					"itemType": 2,
+					"markerValue": "added-detail"
+				},
+				"parentName": "NotesAndFilesTab",
+				"propertyName": "items",
+				"index": 2
 			},
 			{
 				"operation": "merge",

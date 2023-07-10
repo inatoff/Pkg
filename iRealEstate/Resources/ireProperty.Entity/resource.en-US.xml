@@ -10,6 +10,7 @@
 			<Item Name="Columns.irePropertyArea.Caption" Value="Площадь" />
 			<Item Name="Columns.irePropertyOfferType.Caption" Value="Тип предложения недвижимости" />
 			<Item Name="Columns.irePropertyPrice.Caption" Value="Цена, USD" />
+			<Item Name="Columns.irePropertyServiceFee.Caption" Value="Комиссия" />
 			<Item Name="Columns.irePropertyType.Caption" Value="Тип недвижимости" />
 			<Item Name="Columns.ModifiedBy.Caption" Value="Редактировал" />
 			<Item Name="Columns.ModifiedOn.Caption" Value="Дата редакции" />

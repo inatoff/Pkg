@@ -78,7 +78,15 @@
   "E17": "irePropertyOfferTypeId",
   "E18": "irePropertyOfferTypeName"
 }
-~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","a9ad6797-064f-43a9-8eca-e9958beeeefd","92d5a0dd-a4cc-42c1-907c-de2a2200e26e","6e4e124b-6833-4023-9842-f795bc7bbaf9","7a90e5ab-96ff-4628-ba29-7d29d200f9f8","653d4451-7658-4f4e-a307-56081bc01aed","53ee4c69-5b23-42d4-acba-63ee04fd8a1f"]
++ MetaData.Schema.D2 {
+  "UId": "70a7152f-db05-4360-a8a7-6aa78d96b7a5",
+  "A2": "irePropertyServiceFee",
+  "A3": "21553655-6cc7-4e8a-ae1a-f539fe910ca6",
+  "A4": "21553655-6cc7-4e8a-ae1a-f539fe910ca6",
+  "A5": "ac85117e-027c-4227-a6e7-0339db670cfd",
+  "S2": "5cc8060d-6d10-4773-89fc-8c12d6f659a6"
+}
+~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","a9ad6797-064f-43a9-8eca-e9958beeeefd","92d5a0dd-a4cc-42c1-907c-de2a2200e26e","6e4e124b-6833-4023-9842-f795bc7bbaf9","7a90e5ab-96ff-4628-ba29-7d29d200f9f8","653d4451-7658-4f4e-a307-56081bc01aed","53ee4c69-5b23-42d4-acba-63ee04fd8a1f","70a7152f-db05-4360-a8a7-6aa78d96b7a5"]
 - MetaData.Schema.EG1.B6
 - MetaData.Schema.EG1.BK29
 - MetaData.Schema.EG1.BK30
