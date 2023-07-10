@@ -3,6 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Edit page: &quot;Недвижимость&quot;" />
+			<Item Name="LocalizableStrings.AddViews.Value" Value="Add Views" />
 			<Item Name="LocalizableStrings.FLOATf3baaab66e194fdfa6d3c3896b6bb9b9Tip.Value" Value="Аренда - 50%, Продажа - 2%" />
 			<Item Name="LocalizableStrings.ireSchema9039d743Detail6e11f969DetailCaptionOnPage.Value" Value="Просмотры" />
 		</Items>

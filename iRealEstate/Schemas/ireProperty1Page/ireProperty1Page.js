@@ -1,25 +1,28 @@
-define("ireProperty1Page", [], function() {
+define("ireProperty1Page", ["ProcessModuleUtilities"], function(ProcessModuleUtilities) {
 	return {
 		entitySchemaName: "ireProperty",
 		attributes: {
-			/**
-				* Service Fee.
-				*/
-				"irePropertyServiceFee": {
-					dependencies: [
-						{
-							columns: ["irePropertyOfferType"],
-							methodName: "calculateServiceFee"
-						},
-						{
-							columns: ["irePropertyPrice"],
-							methodName: "calculateServiceFee"
-						}
-					]
-				},
+			"irePropertyServiceFee": {
+				dependencies: [
+					{
+						columns: ["irePropertyOfferType"],
+						methodName: "calculateServiceFee"
+					},
+					{
+						columns: ["irePropertyPrice"],
+						methodName: "calculateServiceFee"
+					}
+				]
+			},
 		},
-		modules: /**SCHEMA_MODULES*/{}/**SCHEMA_MODULES*/,
-		details: /**SCHEMA_DETAILS*/{
+		messages: {
+			"irePropertyViewsCreated": {
+				"mode": Terrasoft.MessageMode.BROADCAST,
+				"direction": Terrasoft.MessageDirectionType.SUBSCRIBE
+			}
+		},
+		modules: {},
+		details: {
 			"Files": {
 				"schemaName": "FileDetailV2",
 				"entitySchemaName": "irePropertyFile",
@@ -36,17 +39,42 @@ define("ireProperty1Page", [], function() {
 					"masterColumn": "Id"
 				}
 			}
-		}/**SCHEMA_DETAILS*/,
-		businessRules: /**SCHEMA_BUSINESS_RULES*/{}/**SCHEMA_BUSINESS_RULES*/,
+		},
+		businessRules: {
+            "ireNotes": {
+                "2ed4f988-ff82-43ad-ac4a-07abed12228a": {
+                    "uId": "2ed4f988-ff82-43ad-ac4a-07abed12228a",
+                    "enabled": true,
+                    "removed": false,
+                    "ruleType": 0,
+                    "property": 2,
+                    "logical": 0,
+                    "conditions": [
+                        {
+                            "comparisonType": 7,
+                            "leftExpression": {
+                                "type": 1,
+                                "attribute": "irePropertyPrice"
+                            },
+                            "rightExpression": {
+                                "type": 0,
+                                "value": 100000,
+                                "dataValueType": 5
+                            }
+                        }
+                    ]
+                }
+            },
+		},
 		methods: {
            calculateServiceFee: function() {
                 var price = this.get("irePropertyPrice");
                 var offerType = this.get("irePropertyOfferType");
                 var calculatedValue;
 
-                if (offerType.displayValue === "Аренда") {
+                if (offerType && offerType.displayValue === "Аренда") {
                     calculatedValue = price * 0.5;
-                } else if (offerType.displayValue === "Продажа") {
+                } else if (offerType && offerType.displayValue === "Продажа") {
                     calculatedValue = price * 0.02;
                 } else {
                     calculatedValue = null; // Set default value or handle other offer types
@@ -54,15 +82,44 @@ define("ireProperty1Page", [], function() {
 
                 this.set("irePropertyServiceFee", calculatedValue);
             },
-            onEntityInitialized: function() {
-				this.callParent(arguments);
-                this.calculateServiceFee();
-            },
 			onlyPositiveValues: function(value) {
 				return {
 					invalidMessage: (value && value < 0) ? 'Отрицательное значение недопустимо' : ''
 				};
+			},	
+			getActions: function() {
+				var actionMenuItems = this.callParent(arguments);
+				actionMenuItems.addItem(this.getActionsMenuItem({
+                    "Caption": { bindTo: "Resources.Strings.AddViews" },
+                    "Tag": "getBusinessProcessAddViews",
+                    "Visible": true
+                }));
+                return actionMenuItems;
 			},
+			updateViews: function() {
+				this.updateDetail({
+					"detail": "ireSchema9039d743Detail6e11f969",
+					"reloadAll": true
+				});
+			},
+			getBusinessProcessAddViews: function() {
+				var id = this.get("Id");
+				var args = {
+					sysProcessName: "ireAddPropertyViewsProcess",
+					parameters: {
+						PropertyId: id
+					}
+				};
+				ProcessModuleUtilities.executeProcess(args);
+			},
+			init: function() {
+				this.callParent(arguments);
+				this.sandbox.subscribe("irePropertyViewsCreated", this.updateViews, this);
+			},
+            onEntityInitialized: function() {
+				this.callParent(arguments);
+                this.calculateServiceFee();
+            },
 			setValidationConfig: function() {
 				this.callParent(arguments);
 				this.addColumnValidator("irePropertyPrice", this.onlyPositiveValues);

@@ -2,14 +2,9 @@
   "Descriptor": {
     "UId": "b7b57a8d-2f58-d979-5b3a-a2eaceb9a3b2",
     "Name": "iRealEstate",
-    "ModifiedOnUtc": "\/Date(1688891506000)\/",
+    "ModifiedOnUtc": "\/Date(1688996430000)\/",
     "Maintainer": "Customer",
     "DependsOn": [
-      {
-        "UId": "0ece3a34-413f-415b-919b-7b29bb31701f",
-        "PackageVersion": "7.8.0",
-        "Name": "SalesEnterpriseSoftkey_Obsolete"
-      },
       {
         "UId": "d7559847-f38e-410c-baee-6f43bbe80d42",
         "PackageVersion": "7.8.0",

@@ -1,0 +1,36 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "8a642e44-5736-4631-82f3-5bfff3a81884"
+        },
+        {
+          "SchemaColumnUId": "08ccfffd-cb3e-47c3-9729-1d043a5812e4",
+          "Value": "\/Date(1688975149165+0300)\/"
+        },
+        {
+          "SchemaColumnUId": "1e236958-f206-4fde-8a0e-6783fc223424",
+          "Value": "PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI5NyAyOTciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyOTcgMjk3Ij4KICA8cGF0aCBkPSJtNzMuNDc2LDE3Ny4zNTJjLTMuODg4LDMuOS0zLjg4OCwxMC4yMDkgMCwxNC4xMDcgMS41MDYsMS41MTEgMzcuMzM0LDM3LjAwNyA3NS4wMjQsMzcuMDA3IDM3LjY4OSwwIDczLjUyLTM1LjQ5NSA3NS4wMjYtMzcuMDA2IDMuODg4LTMuODk5IDMuODg4LTEwLjIwOSAwLTE0LjEwOC0xLjUwNy0xLjUxMi0zNy4zMzctMzcuMDA0LTc1LjAyNi0zNy4wMDQtMzcuNjksMC03My41MTgsMzUuNDk0LTc1LjAyNCwzNy4wMDR6bTc1LjAyNCwyMC4xOWMtNy4wNiwwLTEyLjgwNC01Ljg5Mi0xMi44MDQtMTMuMTM2IDAtNy4yNDEgNS43NDQtMTMuMTMzIDEyLjgwNC0xMy4xMzMgNy4wNjEsMCAxMi44MDYsNS44OTIgMTIuODA2LDEzLjEzMyAwLDcuMjQ0LTUuNzQ0LDEzLjEzNi0xMi44MDYsMTMuMTM2em0tMjguNjAzLTI5LjI4N2MtMi42NTYsNC43ODEtNC4xNzksMTAuMjg5LTQuMTc5LDE2LjE1MSAwLDUuODYzIDEuNTIyLDExLjM3MSA0LjE4LDE2LjE1Mi05LjgxNC00Ljk4LTE4LjQ0Mi0xMS4zNDctMjQuMzAxLTE2LjE1MiA1Ljg2LTQuODA3IDE0LjQ4Ni0xMS4xNzEgMjQuMy0xNi4xNTF6bTU3LjIwOSwzMi4zMDJjMi42NTYtNC43ODEgNC4xNzktMTAuMjg5IDQuMTc5LTE2LjE1MSAwLTUuODYyLTEuNTIyLTExLjM2OS00LjE3OS0xNi4xNSA5LjgxMyw0Ljk4IDE4LjQ0LDExLjM0NSAyNC4yOTksMTYuMTUtNS44NjEsNC44MDctMTQuNDg2LDExLjE3Mi0yNC4yOTksMTYuMTUxeiIgZmlsbD0iI0ZGRkZGRiIvPgo8L3N2Zz4="
+        },
+        {
+          "SchemaColumnUId": "90801d7c-a189-4afe-9c3a-a202fbf242d8",
+          "Value": "null"
+        },
+        {
+          "SchemaColumnUId": "b3cd8485-7bd8-4b70-b2dd-bc41e45e9992",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "be95e737-14e9-4253-b0c4-e280da05434d",
+          "Value": "image/svg+xml"
+        },
+        {
+          "SchemaColumnUId": "d245dcaf-23bd-4b73-8718-26fdf38b443b",
+          "Value": "home.svg"
+        }
+      ]
+    }
+  ]
+}

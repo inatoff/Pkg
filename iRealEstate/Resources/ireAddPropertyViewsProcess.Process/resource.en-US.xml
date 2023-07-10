@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="BaseElements.AddDataUserTask1.Caption" Value="Add View" />
+			<Item Name="BaseElements.AddDataUserTask1.Parameters.ConsiderTimeInFilter.Caption" Value="Consider time in the filter" />
+			<Item Name="BaseElements.AddDataUserTask1.Parameters.ConsiderTimeInFilter.DisplayValue" Value="true" />
+			<Item Name="BaseElements.AddDataUserTask1.Parameters.DataSourceFilters.Caption" Value="Data source filters" />
+			<Item Name="BaseElements.AddDataUserTask1.Parameters.EntitySchemaId.Caption" Value="Object" />
+			<Item Name="BaseElements.AddDataUserTask1.Parameters.FilterEntitySchemaId.Caption" Value="Object" />
+			<Item Name="BaseElements.AddDataUserTask1.Parameters.RecordAddMode.Caption" Value="Record adding mode" />
+			<Item Name="BaseElements.AddDataUserTask1.Parameters.RecordDefValues.Caption" Value="Set column values" />
+			<Item Name="BaseElements.AddDataUserTask1.Parameters.RecordId.Caption" Value="Created record Id" />
+			<Item Name="BaseElements.ConditionalSequenceFlow1.Caption" Value="Exit flow" />
+			<Item Name="BaseElements.ConditionalSequenceFlow2.Caption" Value="Left views to create" />
+			<Item Name="BaseElements.ExclusiveGateway1.Caption" Value="View creation loop" />
+			<Item Name="BaseElements.FormulaTask1.Caption" Value="Reduce views count" />
+			<Item Name="BaseElements.FormulaTask2.Caption" Value="Increase Date" />
+			<Item Name="BaseElements.FormulaTask3.Caption" Value="Set First View Date" />
+			<Item Name="BaseElements.ScriptTask1.Caption" Value="Notify about created views" />
+			<Item Name="Caption" Value="ireAddPropertyViewsProcess" />
+			<Item Name="LaneSets.LaneSet1.Caption" Value="LaneSet 1" />
+			<Item Name="LaneSets.LaneSet1.Lanes.Lane1.Caption" Value="Lane 1" />
+			<Item Name="NotificationCaption.Caption" Value="Process instance caption" />
+			<Item Name="NotificationCaption.DisplayValue" Value="[#Process name#]" />
+			<Item Name="Parameters.ProcessSchemaParameter1.Caption" Value="PropertyId" />
+			<Item Name="Parameters.ProcessSchemaParameter2.Caption" Value="ViewDateTime" />
+			<Item Name="Parameters.ProcessSchemaParameter3.Caption" Value="ViewsCount" />
+			<Item Name="Parameters.ProcessSchemaParameter3.DisplayValue" Value="5" />
+		</Items>
+	</Group>
+</Resources>

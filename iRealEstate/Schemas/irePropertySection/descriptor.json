@@ -1,14 +1,13 @@
 ﻿{
   "Descriptor": {
     "UId": "abb6cd49-adc3-4b7e-881d-00610f4ad554",
-    "Name": "ireProperty7fb68862Section",
-    "ModifiedOnUtc": "\/Date(1688901114000)\/",
+    "Name": "irePropertySection",
+    "ModifiedOnUtc": "\/Date(1689003121000)\/",
     "Parent": {
       "UId": "7912fb69-4fee-429f-8b23-93943c35d66d",
       "Name": "BaseSectionV2"
     },
     "ManagerName": "ClientUnitSchemaManager",
-    "Caption": "Section schema: \"Недвижимость\"",
-    "DependsOn": []
+    "Caption": "Section schema: \"Недвижимость\""
   }
 }
