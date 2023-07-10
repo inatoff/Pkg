@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "2b3d16ce-a45c-4495-a1e4-8ea21e2d535d",
+		"name": "ireRequests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16540538"
+	},
+	"item": [
+		{
+			"name": "Get Properties Price Summary By Property Type And Offer Type",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "BPMCSRF",
+						"value": "{{bpmcsrf}}",
+						"type": "text"
+					},
+					{
+						"key": ".ASPXAUTH",
+						"value": "{{aspxauth}}",
+						"type": "text"
+					},
+					{
+						"key": "BPMLOADER",
+						"value": "{{bpmloader}}",
+						"type": "text"
+					},
+					{
+						"key": "UserName",
+						"value": "{{UserName}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"propertyType\":\"C73A2DFB-8EBE-4152-9530-20521ABBB09F\",\r\n    \"offerType\":\"C0B0333A-CA36-44A1-8DBE-3EA46375BB15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:82/0/rest/IrePropertyService/GetPropertiesPricesSummaryByTypeAndOfferType",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "82",
+					"path": [
+						"0",
+						"rest",
+						"IrePropertyService",
+						"GetPropertiesPricesSummaryByTypeAndOfferType"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authentication",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"aspxauth\", pm.cookies.get('.ASPXAUTH'));\r",
+							"pm.collectionVariables.set(\"bpmcsrf\", pm.cookies.get('BPMCSRF'));\r",
+							"pm.collectionVariables.set(\"bpmloader\", pm.cookies.get('BPMLOADER'));\r",
+							"pm.collectionVariables.set(\"UserName\", pm.cookies.get('UserName'));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserName\": \"Supervisor\", \r\n    \"UserPassword\":\"Supervisor\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:82/ServiceModel/AuthService.svc/Login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "82",
+					"path": [
+						"ServiceModel",
+						"AuthService.svc",
+						"Login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Authentication",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserName\": \"Supervisor\", \r\n    \"UserPassword\":\"Supervisor\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:82/ServiceModel/AuthService.svc/Login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "82",
+							"path": [
+								"ServiceModel",
+								"AuthService.svc",
+								"Login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "private"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Location",
+							"value": "/0"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Terrasoft-UserCulture",
+							"value": "en-US"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": ".ASPXAUTH=119704B3ACDFC842334BCCB6C22C6ED971BF63D4527FDAC3C81C84FC4348718F7DD59CEFA9951696712FF0E04F6AF66162B3661019D99A0D7B0A010B15D0B2DD25EC3BCB3E828067A6632649E236966C11779A11F8F07F5B9E787BCFFF82056FA16237DEAEA6737ACFAE838E3A08116E3B4EBC28E3C0B5EA0E84912E7432364695326529A81C29B8D13DA3271B249FFC0EC511495746C27D0A785E60E86FB4ED7804CB7E7D0F9AB3A8C5B9934BB6D91651AAE5B3E048B8B1460319E60611E2B075C504ACF15E17041017C1489F981A037A62973D92A56C502F336CE7659F1475D50020C1920492A3E95F70C4BC72A2B4849B3EF9A22F1A9538D8768045FAE2DE2DB9DE71C8C23C319ECAF28874F31F4EEADD2CB83C11EC6DDD524E6EB2B756D187D4BCBC02C29CF4DA7627497C31FCB6948803E4999CB37CE19FCDC69AEA37036A54E6962561B4B4E8ABE783A40BB17C95A92D4D65EAB0123AF516BCF9FD538B78BF217F0C97C0BDFC0779C36643FFD235AF0A901B88CAB9615DA88C0CA4E03D1212A5DDF291059BFFA3F211F63228F7412E5AE47335A19099191C58730D64BF12D8AEF88DD983100549E3EC57F0F888B3CB5EE7530ABCEE253E94AC76C00665DB06453C2C5099222B8E23173460696D7657ECFBF595B42CA15C2DA2203232701F213143872BD027673F57F00D5F5248BAB91801; path=/; HttpOnly"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "BPMCSRF=u8kvWgH2XRqWsM5swUj3eu; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "UserName=83|117|112|101|114|118|105|115|111|114; expires=Wed, 09-Aug-2023 09:53:36 GMT; path=/; HttpOnly"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 10 Jul 2023 09:53:36 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Code\": 0,\n    \"Message\": \"\",\n    \"Exception\": null,\n    \"PasswordChangeUrl\": null,\n    \"RedirectUrl\": null\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "aspxauth",
+			"value": ""
+		},
+		{
+			"key": "bpmcsrf",
+			"value": ""
+		},
+		{
+			"key": "bpmloader",
+			"value": ""
+		},
+		{
+			"key": "UserName",
+			"value": ""
+		}
+	]
+}
